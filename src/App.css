@@ -1,38 +1,132 @@
+body {
+    height: 100vh;
+    background-color: #1c1c1c;
+    display: grid;
+    place-items: center;
+}
+
+p {
+    margin: 0;
+}
+
 .App {
-  text-align: center;
+    height: 550px;
+    width: 550px;
+    background-color: #F5F7FB;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.start-screen {
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.start-screen .yellow-blob {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.start-screen .blue-blob {
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.start-screen div {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    height: 100%;
+    width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title {
+    margin: 0;
+    font-size: 32px;
+    color: #293264;
+    font-family: Karla, sans-serif;
+}
+
+.btn {
+    background-color: #4D5B9E;
+    color: #F5F7FB;
+    border: none;
+    border-radius: 15px;
+    font-family: Inter, sans-serif;
+    cursor: pointer;
+}
+
+.btn.small {
+    height: 35px;
+    width: 120px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: bolder;
+    line-height: 12px;
+    margin-top: 20px;
+}
+
+.btn.big {
+    height: 52px;
+    width: 193px;
+    font-size: 16px;
+}
+
+.quiz-screen {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.questions {
+    height: 100%;
+    width: 100%;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+.quiz-screen .yellow-blob {
+    position: absolute;
+    top: -10px;
+    right: -40px;
+}
+
+.quiz-screen .blue-blob {
+    position: absolute;
+    bottom: -40px;
+    left: -60px;
+}
+
+.question {
+    border-bottom: 1px solid #DBDEF0;
+    padding: 15px 0;
+    text-align: left;
+}
+
+.question--text {
+    color: #293264;
+    font-weight: bold;
+}
+
+.option {
+    height: 22px;
+    padding: 0 15px;
+    border: 1px solid #4D5B9E;
+    background-color: transparent;
+    margin-right: 15px;
+    margin-top: 15px;
+    font-size: 10px;
+    font-family: Inter, sans-serif;
+    color: #293264;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.option.selected {
+    background-color: #D6DBF5;
+    border-color: #D6DBF5;
 }
